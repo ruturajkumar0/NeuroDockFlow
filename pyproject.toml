@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurodynamicsflow"
+version = "1.0.0"
+description = "AI-assisted molecular docking, molecular dynamics simulation, and trajectory analysis platform"
+readme = "README.md"
+license = { text = "MIT" }
+
+authors = [
+{ name = "Rituraj Kumar", email = "[riturajkumar14082002@gmail.com](mailto:riturajkumar14082002@gmail.com)" }
+]
+
+keywords = [
+"molecular-dynamics",
+"molecular-docking",
+"gromacs",
+"autodock-vina",
+"bioinformatics",
+"computational-biology",
+"drug-discovery",
+"protein-ligand",
+"trajectory-analysis",
+"pharmacoinformatics"
+]
+
+classifiers = [
+"Development Status :: 4 - Beta",
+"Environment :: Web Environment",
+"Framework :: Flask",
+"Intended Audience :: Science/Research",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+"Programming Language :: Python :: 3",
+"Programming Language :: Python :: 3.11",
+"Programming Language :: Python :: 3.12",
+"Topic :: Scientific/Engineering :: Bio-Informatics",
+"Topic :: Scientific/Engineering :: Chemistry"
+]
+
+requires-python = ">=3.11"
+
+dependencies = [
+"flask",
+"flask-cors",
+"numpy",
+"pandas",
+"matplotlib",
+"scipy",
+"biopython",
+"mdanalysis",
+"requests",
+"plotly"
+]
+
+[project.optional-dependencies]
+dev = [
+"pytest",
+"pytest-cov",
+"black",
+"isort",
+"flake8"
+]
+
+[project.urls]
+Homepage = "https://github.com/ruturajkumar0/NeuroDynamicsFlow"
+Documentation = "https://github.com/ruturajkumar0/NeuroDynamicsFlow"
+Repository = "https://github.com/ruturajkumar0/NeuroDynamicsFlow"
+Issues = "https://github.com/ruturajkumar0/NeuroDynamicsFlow/issues"
+
+[project.scripts]
+neurodynamicsflow = "neurodynamicsflow.**main**:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["neurodynamicsflow*"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100

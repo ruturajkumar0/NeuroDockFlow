@@ -1,0 +1,47 @@
+# Include package resources
+
+recursive-include neurodynamicsflow/templates *
+recursive-include neurodynamicsflow/static *
+recursive-include neurodynamicsflow/images *
+
+# Documentation
+
+include README.md
+include LICENSE
+
+# Project configuration
+
+include pyproject.toml
+include requirements.txt
+
+# Exclude development files
+
+exclude .gitignore
+exclude .dockerignore
+exclude Dockerfile
+
+# Exclude cache and temporary files
+
+prune **pycache**
+prune tests
+prune .pytest_cache
+prune .github
+
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.swp
+global-exclude .DS_Store
+
+# Exclude large molecular dynamics files
+
+global-exclude *.xtc
+global-exclude *.trr
+global-exclude *.edr
+global-exclude *.cpt
+global-exclude *.tpr
+
+# Exclude temporary docking files
+
+global-exclude *.log
+global-exclude *.tmp
+global-exclude *.bak
